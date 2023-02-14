@@ -1,5 +1,6 @@
 import java.util.*;
 // Main method implementions BankTransfer Interface
+
 public class Main implements BankTransfer{
     public static ArrayList<BankAccount> accounts = new ArrayList<BankAccount>();
 
@@ -28,6 +29,8 @@ public class Main implements BankTransfer{
     }
 
     public static void main(String[] args) {
+
+        //Creating Objects 
         Main obj = new Main();
 
         Savings ac1 = new Savings("Akash", 19, 123456, 50000);
