@@ -1,4 +1,5 @@
 import java.util.*;
+// Main method implementions BankTransfer Interface
 public class Main implements BankTransfer{
     public static ArrayList<BankAccount> accounts = new ArrayList<BankAccount>();
 
