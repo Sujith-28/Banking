@@ -27,6 +27,20 @@ public class Main implements BankTransfer{
             System.out.println("Transaction Failed!");
         }
     }
+    public void Deposit(int accountNumber, int amount){
+        BankAccount obj = null;
+
+        for(BankAccount account : accounts){
+            if(account.getAccountNumber() == accountNumber){
+                obj = account;
+            }
+        }
+
+        obj.addMoney(amount);
+        System.out.println("Money Deposited Successfully");
+        System.out.print("New Account Balance : ");
+        obj.checkBalance();
+    }
 
     public static void main(String[] args) {
 
@@ -46,5 +60,7 @@ public class Main implements BankTransfer{
 
         ac1.displayDetails();
         ac2.displayDetails();
+
+        obj.Deposit(123456, 30000);
     }
 }
